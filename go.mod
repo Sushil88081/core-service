@@ -1,3 +1,3 @@
-module github.com/core-service
+module github.com/Sushil88081/backend-services/core-service
 
 go 1.23.0
