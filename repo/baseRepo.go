@@ -14,6 +14,10 @@ type BaseModel[T any] struct {
 	Db *gorm.DB
 }
 
+func NewBaseModel[T any](db *gorm.DB) *BaseModel[T] {
+	return &BaseModel[T]{Db: db}
+}
+
 func (b *BaseModel[T]) Create(entity T) error {
 	return b.Db.Create(&entity).Error
 }
